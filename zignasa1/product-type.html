@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Type Selection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('product-bg.jpg'); /* Background image */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        select, button {
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Select Product Type</h1>
+        <select id="productType">
+            <option value="cleanser">Cleanser</option>
+            <option value="moisturizer">Moisturizer</option>
+            <option value="serum">Serum</option>
+            <option value="toners">Toners</option>
+            <option value="sunscreen">Sunscreen</option>
+            <option value="nightgel">Night Gel</option>
+        </select>
+        <button onclick="nextPage()">Next</button>
+    </div>
+    <script>
+        function nextPage() {
+            const productType = document.getElementById('productType').value;
+            localStorage.setItem('productType', productType); // Save selected product type
+            window.open('brands.html', '_blank'); // Navigate to next page
+        }
+    </script>
+</body>
+</html>

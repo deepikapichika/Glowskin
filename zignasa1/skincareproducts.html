@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skincare Product Recommendation</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            background: #aa620480;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .main {
+            width: 100%;
+            height: 100vh;
+            background-image: url('skinback.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgb(255, 255, 255);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        button {
+            background: #ffcb63;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #5753d1;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Skincare Product Recommendation</h1>
+</header>
+
+<div class="main">
+    <div class="container">
+        <h2>Select Your Preferences</h2>
+        <label for="gender">Gender:</label>
+        <select id="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+
+        <button id="next">Next</button>
+    </div>
+</div>
+
+<script>
+    document.getElementById('next').addEventListener('click', function() {
+        // Get selected values
+        const gender = document.getElementById('gender').value;
+
+        // Optional: Store selected values in localStorage or pass as query parameters if needed
+        console.log(`Gender: ${gender}`);
+
+        // Open the product details page
+        window.open("product-details.html", "_blank");
+    });
+</script>
+
+</body>
+</html>

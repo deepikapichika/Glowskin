@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cleanser Brands and Submodules</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('skinback.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            background: rgba(214, 171, 91, 0.551);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #444;
+        }
+        .brand-box {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            background: #f4f4f4;
+        }
+        .brand-box h2 {
+            color: #333;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .submodules {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .submodule-box {
+            width: 200px;
+            background: rgba(226, 200, 157, 0.514);
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 15px;
+        }
+        .submodule-box img {
+            width: 150px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 0%;
+            margin-bottom: 0px;
+        }
+        .submodule-box h3 {
+            font-size: 16px;
+            color: #444;
+        }
+        .submodule-box button {
+            background: #ffcb63;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .submodule-box button:hover {
+            background: #5753d1;
+        }
+        .details {
+            margin-top: 10px;
+            padding: 10px;
+            background: #e8f5e9;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Cleanser Brands</h1>
+    
+        <!-- Cetaphil Module -->
+        <div class="brand-box">
+            <h2>Cetaphil</h2>
+            <div class="submodules">
+                <div class="submodule-box">
+                    <img src="cetasen.jpg" alt="Sensitive Skin">
+                    <h3>Sensitive Skin</h3>
+                    <button onclick="showDetails('Cetaphil', 'Sensitive Skin')">View Product details</button>
+                <div id="Cetaphil-Sensitive Skin" class="details"></div>
+                </div>
+                <div class="submodule-box">
+                    <img src="cetaoil.jpg" alt="Oily Skin">
+                    <h3>Oily Skin</h3>
+                    <button onclick="showDetails('Cetaphil', 'Oily Skin')">View Product details</button>
+                <div id="Cetaphil-Oily Skin" class="details"></div>
+                </div>
+                <div class="submodule-box">
+                    <img src="cetacomb.jpg" alt="Combination Skin">
+                    <h3>Combination Skin</h3>
+                    <button onclick="showDetails('Cetaphil', 'Combination Skin')">View Product details</button>
+                <div id="Cetaphil-Combination Skin" class="details"></div>
+                </div>
+            </div>
+        </div>
+   <!-- Plum Module -->
+   <div class="brand-box">
+    <h2>Plum</h2>
+    <div class="submodules">
+        <div class="submodule-box">
+            <img src="Cplumsen.jpg" alt="Sensitive Skin">
+            <h3>Sensitive Skin</h3>
+            <button onclick="showDetails('Plum', 'Sensitive Skin')">View Product details</button>
+                <div id="Plum-Sensitive Skin" class="details"></div>
+        </div>
+        <div class="submodule-box">
+            <img src="Cplumoil.jpg" alt="Oily Skin">
+            <h3>Oily Skin</h3>
+            <button onclick="showDetails('Plum', 'Oily Skin')">View Product details</button>
+                <div id="Plum-Oily Skin" class="details"></div>
+        </div>
+        <div class="submodule-box">
+            <img src="Cplumcom.jpg" alt="Combination Skin">
+            <h3>Combination Skin</h3>
+            <button onclick="showDetails('Plum', 'Combination Skin')">View Product details</button>
+                <div id="Plum-Combination Skin" class="details"></div>
+        </div>
+    </div>
+</div>
+<!-- Foxtale Module -->
+<div class="brand-box">
+    <h2>Foxtale</h2>
+    <div class="submodules">
+        <div class="submodule-box">
+            <img src="Cfoxdry.jpg" alt="Dry Skin">
+            <h3>Dry Skin</h3>
+            <button onclick="showDetails('Foxtale', 'Dry Skin')">View Product details</button>
+                <div id="Foxtale-Dry Skin" class="details"></div>
+        </div>
+        <div class="submodule-box">
+            <img src="Cfoxoil.jpg" alt="Oily Skin">
+            <h3>Oily Skin</h3>
+            <button onclick="showDetails('Foxtale', 'Oily Skin')">View Product details</button>
+                <div id="Foxtale-Oily Skin" class="details"></div>
+        </div>
+        <div class="submodule-box">
+            <img src="Cfoxcom.jpg" alt="Combination Skin">
+            <h3>Combination Skin</h3>
+            <button onclick="showDetails('Foxtale', 'Combination Skin')">View Product details</button>
+                <div id="Foxtale-Combination Skin" class="details"></div>
+        </div>
+    </div>
+</div>
+<!-- Minimalist Module -->
+<div class="brand-box">
+    <h2>Minimalist</h2>
+    <div class="submodules">
+        <div class="submodule-box">
+            <img src="Cminsen.jpg" alt="Sensitive Skin">
+            <h3>Sensitive Skin</h3>
+            <button onclick="showDetails('Minimalist', 'Sensitive Skin')">View Product details</button>
+                <div id="Minimalist-Sensitive Skin" class="details"></div>
+        </div>
+        <div class="submodule-box">
+            <img src="Cminoil.jpg" alt="Oily Skin">
+            <h3>Oily Skin</h3>
+            <button onclick="showDetails('Minimalist', 'Oily Skin')">View Product details</button>
+                <div id="Minimalist-Oily Skin" class="details"></div>
+        </div>
+    </div>
+</div>
+
+<!-- The Face Shop Module -->
+<div class="brand-box">
+    <h2>The Face Shop</h2>
+    <div class="submodules">
+        <div class="submodule-box">
+            <img src="Cfacesen.jpg" alt="Sensitive Skin">
+            <button onclick="showDetails('The Face Shop', 'Sensitive Skin')">View Product details</button>
+                <div id="The Face Shop-Sensitive Skin" class="details"></div>
+            
+        </div>
+        <div class="submodule-box">
+            <img src="Cfacecom.jpg" alt="Combination Skin">
+            <h3>Combination Skin</h3>
+            <button onclick="showDetails('The Face Shop', 'Combination Skin')">View Product details</button>
+                <div id="The Face Shop-Combination Skin" class="details"></div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<script>
+    const productDetails = {
+        'Cetaphil': {
+            'Sensitive Skin': {
+                pros: "Gentle on the skin, non-irritating.",
+                uses: "Use daily for best results.",
+                directions: "Apply to wet skin and rinse.",
+                whenToUse: "Morning and night."
+            },
+            'Oily Skin': {
+                pros: "Gentle foundation ,hydration without gresiness.",
+                uses: "maintains skin's natural pH balance.",
+                directions: "Wet by face:start by raising your face with lukewarm water.",
+                whenToUse: "Morning and night."
+            },
+            'Combination Skin': {
+
+                pros: "balanced areas,Versalityand gradual",
+                uses: "Gentl cleansers",
+                directions: "Massage gently on wet face and rinse.",
+                whenToUse: "Morning and night."
+            }
+        },
+        'Plum': {
+            'Sensitive Skin': {
+                pros: "Free from harsh chemicals.",
+                uses: "Use daily for best results.",
+                directions: "Apply to wet skin and rinse.",
+                whenToUse: "Morning and night."
+            },
+            'Oily Skin': {
+                pros: "Controls oil without drying.",
+                uses: "Use daily for best results.",
+                directions: "Massage gently on wet face and rinse.",
+                whenToUse: "Morning and night."
+            },
+            'Combination Skin': {
+
+                pros: "Balances oil poduction",
+                uses: "Use daily for best results.",
+                directions: "Massage gently on wet face and rinse.",
+                whenToUse: "Morning and night."
+            }
+        },
+        'Foxtale': {
+            'Dry Skin': {
+                pros: "Gentle on the skin, non-irritating.",
+                uses: "Suitable for post-workout",
+                directions: "Apply to wet skin and rinse.",
+                whenToUse: "Morning and night."
+            },
+            'Oily Skin': {
+                pros: "Dual action formula",
+                uses: "Use daily for best results.",
+                directions: "Massage gently on wet face and rinse.",
+                whenToUse: "Morning and night."
+            },
+            'Combination Skin': {
+
+                pros: "Controls oil without drying.",
+                uses: "Hydrating and self-balancing",
+                directions: "Massage gently on wet face and rinse.",
+                whenToUse: "Morning and night."
+            }
+        },
+        'Minimalist': {
+            'Sensitive Skin': {
+                pros: "Gentle on the skin, non-irritating.",
+                uses: "Use daily for best results.",
+                directions: "Apply to wet skin and rinse.",
+                whenToUse: "Morning and night."
+            },
+            'Oily Skin': {
+                pros: "Controls oil without drying.",
+                uses: "gently exfoliates",
+                directions: "Massage gently on wet face and rinse.",
+                whenToUse: "Morning and night."
+            }
+        },
+        'The Face Shop': {
+            'Sensitive Skin': {
+                pros: "Gentle on the skin, non-irritating.",
+                uses: "gentle cleanse",
+                directions: "Apply to wet skin and rinse.",
+                whenToUse: "Morning and night."
+            },
+            'Combination Skin': {
+
+                pros: "Controls oil without drying.",
+                uses: "Use daily for best results.",
+                directions: "Massage gently on wet face and rinse.",
+                whenToUse: "Morning and night."
+            }
+        }
+
+        
+    };
+
+    function showDetails(brand, skinType) {
+        const detailDiv = document.getElementById(`${brand}-${skinType}`);
+        const details = productDetails[brand][skinType];
+        if (details) {
+            detailDiv.innerHTML = `
+                <strong>Pros:</strong> ${details.pros}<br>
+                <strong>Uses:</strong> ${details.uses}<br>
+                <strong>Directions:</strong> ${details.directions}<br>
+                <strong>When to Use:</strong> ${details.whenToUse}<br>
+            `;
+            detailDiv.style.display = detailDiv.style.display === "none" ? "block" : "none";
+        }
+    }
+</script>
+
+</body>
+</html>

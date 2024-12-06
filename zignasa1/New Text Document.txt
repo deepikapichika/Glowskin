@@ -1,0 +1,172 @@
+<button id="submit">Get Product Details</button>
+
+        <div class="product-details" id="productDetails" style="display: none;">
+            <h2>Product Details</h2>
+            <p id="pros"></p>
+            <p id="cons"></p>
+            <p id="uses"></p>
+            <p id="directions"></p>
+            <p id="whenToUse"></p>
+            <p id="reviews"></p>
+            <p id="ratings"></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('submit').addEventListener('click', function() {
+            const gender = document.getElementById('gender').value;
+            const skinType = document.getElementById('skinType').value;
+            const productType = document.getElementById('productType').value;
+            const brand = document.getElementById('brand').value;
+
+            // Example product details based on selections
+            let productDetails = {
+                'cleanser': {
+                    'Cetafil': {
+                        pros: "Gentle on the skin, non-irritating.",
+                        cons: "May not remove heavy makeup.",
+                        uses: "Use daily for best results.",
+                        directions: "Apply to wet skin and rinse.",
+                        whenToUse: "Morning and night.",
+                        reviews: "Highly rated for sensitive skin.",
+                        ratings: "4.5/5"
+                    },
+                    'CeraVe': {
+                        pros: "Contains ceramides for hydration.",
+                        cons: "Can feel heavy for some.",
+                        uses: "Use daily for best results.",
+                        directions: "Apply to wet skin and rinse.",
+                        whenToUse: "Morning and night.",
+                        reviews: "Great for dry skin.",
+                        ratings: "4.7/5"
+                    }
+                },
+                'moisturizer': {
+                    'Minimalist': {
+                        pros: "Lightweight and absorbs quickly.",
+                        cons: "May not be enough for very dry skin.",
+                        uses: "Apply after cleansing.",
+                        directions: "Use a small amount and massage into skin.",
+                        whenToUse: "Morning and night.",
+                        reviews: "Perfect for oily skin.",
+                        ratings: "4.6/5"
+                    },
+                    'Plum': {
+                        pros: "Natural ingredients, cruelty-free.",
+                        cons: "Scent may not be for everyone.",
+                        uses: "Apply generously to face and neck.",
+                        directions: "Use after cleansing.",
+                        whenToUse: "Morning and night.",
+                        reviews: "Loved by many for its texture.",
+                        ratings: "4.8/5"
+                    }
+                }
+                // Add more products and brands as needed
+            };
+
+            // Get the selected product type and brand
+            if (productDetails[productType] && productDetails[productType][brand]) {
+                const details = productDetails[productType][brand];
+                document.getElementById('pros').innerText = "Pros: " + details.pros;
+                document.getElementById('cons').innerText = "Cons: " + details.cons;
+                document.getElementById('uses').innerText = "Uses: " + details.uses;
+                document.getElementById('directions').innerText = "Directions: " + details.directions;
+                document.getElementById('whenToUse').innerText = "When to Use: " + details.whenToUse;
+                document.getElementById('reviews').innerText = "Reviews: " + details.reviews;
+                document.getElementById('ratings').innerText = "Ratings: " + details.ratings;
+
+                document.getElementById('productDetails').style.display = 'block';
+            } else {
+                alert("Please select a valid product type and brand.");
+                document.getElementById('productDetails').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>\
+<button id="submit">Get Product Details</button>
+
+        <div class="product-details" id="productDetails" style="display: none;">
+            <h2>Product Details</h2>
+            <p id="pros"></p>
+            <p id="cons"></p>
+            <p id="uses"></p>
+            <p id="directions"></p>
+            <p id="whenToUse"></p>
+            <p id="reviews"></p>
+            <p id="ratings"></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('submit').addEventListener('click', function() {
+            const gender = document.getElementById('gender').value;
+            const skinType = document.getElementById('skinType').value;
+            const productType = document.getElementById('productType').value;
+            const brand = document.getElementById('brand').value;
+
+            // Example product details based on selections
+            let productDetails = {
+                'cleanser': {
+                    'Cetafil': {
+                        pros: "Gentle on the skin, non-irritating.",
+                        cons: "May not remove heavy makeup.",
+                        uses: "Use daily for best results.",
+                        directions: "Apply to wet skin and rinse.",
+                        whenToUse: "Morning and night.",
+                        reviews: "Highly rated for sensitive skin.",
+                        ratings: "4.5/5"
+                    },
+                    'CeraVe': {
+                        pros: "Contains ceramides for hydration.",
+                        cons: "Can feel heavy for some.",
+                        uses: "Use daily for best results.",
+                        directions: "Apply to wet skin and rinse.",
+                        whenToUse: "Morning and night.",
+                        reviews: "Great for dry skin.",
+                        ratings: "4.7/5"
+                    }
+                },
+                'moisturizer': {
+                    'Minimalist': {
+                        pros: "Lightweight and absorbs quickly.",
+                        cons: "May not be enough for very dry skin.",
+                        uses: "Apply after cleansing.",
+                        directions: "Use a small amount and massage into skin.",
+                        whenToUse: "Morning and night.",
+                        reviews: "Perfect for oily skin.",
+                        ratings: "4.6/5"
+                    },
+                    'Plum': {
+                        pros: "Natural ingredients, cruelty-free.",
+                        cons: "Scent may not be for everyone.",
+                        uses: "Apply generously to face and neck.",
+                        directions: "Use after cleansing.",
+                        whenToUse: "Morning and night.",
+                        reviews: "Loved by many for its texture.",
+                        ratings: "4.8/5"
+                    }
+                }
+                // Add more products and brands as needed
+            };
+
+            // Get the selected product type and brand
+            if (productDetails[productType] && productDetails[productType][brand]) {
+                const details = productDetails[productType][brand];
+                document.getElementById('pros').innerText = "Pros: " + details.pros;
+                document.getElementById('cons').innerText = "Cons: " + details.cons;
+                document.getElementById('uses').innerText = "Uses: " + details.uses;
+                document.getElementById('directions').innerText = "Directions: " + details.directions;
+                document.getElementById('whenToUse').innerText = "When to Use: " + details.whenToUse;
+                document.getElementById('reviews').innerText = "Reviews: " + details.reviews;
+                document.getElementById('ratings').innerText = "Ratings: " + details.ratings;
+
+                document.getElementById('productDetails').style.display = 'block';
+            } else {
+                alert("Please select a valid product type and brand.");
+                document.getElementById('productDetails').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>\

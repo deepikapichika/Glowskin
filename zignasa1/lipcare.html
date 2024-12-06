@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lipcare Brands and Submodules</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('skinback.jpg'); /* Background image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            background: rgba(214, 171, 91, 0.551);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #444;
+        }
+        .brand-box {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            background: #f4f4f4;
+        }
+        .brand-box h2 {
+            color: #333;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .submodules {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .submodule-box {
+            width: 200px;
+            background: rgba(226, 200, 157, 0.514);
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 15px;
+        }
+        .submodule-box img {
+            width: 150px;
+            height: 250px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        .submodule-box h3 {
+            font-size: 16px;
+            color: #444;
+        }
+        .submodule-box button {
+            background: #ffcb63;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .submodule-box button:hover {
+            background: #5753d1;
+        }
+        .details {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Lipcare Brands</h1>
+
+    <!-- Nivea Module -->
+    <div class="brand-box">
+        <h2>Nivea</h2>
+        <div class="submodules">
+            <div class="submodule-box">
+                <img src="Liniv.jpg" alt="For All">
+                <h3>For All</h3>
+                <button onclick="showDetails('Nivea', 'For All')">View Product Details</button>
+                <div id="Nivea-For All" class="details"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vaseline Module -->
+    <div class="brand-box">
+        <h2>Vaseline</h2>
+        <div class="submodules">
+            <div class="submodule-box">
+                <img src="liva.jpg" alt="For All">
+                <h3>For All</h3>
+                <button onclick="showDetails('Vaseline', 'For All')">View Product Details</button>
+                <div id="Vaseline-For All" class="details"></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    const productDetails = {
+        'Nivea': {
+            'For All': {
+                pros: "Provides deep hydration and protection.",
+                uses: "Suitable for all lip types, including chapped lips.",
+                directions: "Apply generously to lips as needed.",
+                whenToUse: "Morning, evening, or anytime your lips feel dry."
+            }
+        },
+        'Vaseline': {
+            'For All': {
+                pros: "Locks in moisture and soothes dry lips.",
+                uses: "Ideal for use in harsh weather or daily care.",
+                directions: "Apply a thin layer on lips and gently massage.",
+                whenToUse: "Use as required throughout the day."
+            }
+        }
+    };
+
+    function showDetails(brand, skinType) {
+        const detailDiv = document.getElementById(`${brand}-${skinType}`);
+        const details = productDetails[brand][skinType];
+        if (details) {
+            detailDiv.innerHTML = `
+                <strong>Pros:</strong> ${details.pros}<br>
+                <strong>Uses:</strong> ${details.uses}<br>
+                <strong>Directions:</strong> ${details.directions}<br>
+                <strong>When to Use:</strong> ${details.whenToUse}<br>
+            `;
+            detailDiv.style.display = detailDiv.style.display === "none" ? "block" : "none";
+        }
+    }
+</script>
+
+</body>
+</html>

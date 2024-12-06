@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cleanser Brands and Submodules</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('skinback.jpg'); /* Background image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            background: rgba(214, 171, 91, 0.551);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #444;
+        }
+        .brand-box {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            background: #f4f4f4;
+        }
+        .brand-box h2 {
+            color: #333;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .submodules {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .submodule-box {
+            width: 200px;
+            background: rgba(226, 200, 157, 0.514);
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 15px;
+        }
+        .submodule-box img {
+            width: 150px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 0%;
+            margin-bottom: 0px;
+        }
+        .submodule-box h3 {
+            font-size: 16px;
+            color: #444;
+        }
+        .submodule-box button {
+            background: #ffcb63;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .submodule-box button:hover {
+            background: #5753d1;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Sunscreen Brands</h1>
+
+    <!-- DrSheth Module -->
+    <div class="brand-box">
+        <h2>DrSheth</h2>
+        <div class="submodules">
+            <div class="submodule-box">
+                <img src="Sudrall.jpg" alt="All Skin Types">
+                <h3>All Skin Types</h3>
+                <button onclick="showDetails('DrSheth', 'All Skin Types')">View Product Details</button>
+                <div id="DrSheth-All Skin Types" class="details"></div>
+            </div>
+            <div class="submodule-box">
+                <img src="Sudrdry.jpg" alt="Dry Skin">
+                <h3>Dry Skin </h3>
+                <button onclick="showDetails('DrSheth', 'Dry Skin')">View Product Details</button>
+                <div id="DrSheth-Dry Skin" class="details"></div>
+            </div>
+    
+        </div>
+    </div>
+
+    <!-- DermaCo Module -->
+    <div class="brand-box">
+        <h2>DermaCo</h2>
+        <div class="submodules">
+            <div class="submodule-box">
+                <img src="Suderoil.jpg" alt="Oil Skin">
+                <h3>Oil Skin</h3>
+                <button onclick="showDetails('Dermaco', 'Oil Skin')">View Product Details</button>
+                <div id="Dermaco -Oil Skin" class="details"></div>
+            </div>
+            <div class="submodule-box">
+                <img src="Sudernorm.jpg" alt="Normal Skin">
+                <h3>Normal Skin</h3>
+                <button onclick="showDetails('Dermaco', 'Normal Skin')">View Product Details</button>
+                <div id="Dermaco-Normal Skin" class="details"></div>
+            </div>
+            <div class="submodule-box">
+                <img src="Suderall.jpg" alt="All Skin Types">
+                <h3>All Skin Types</h3>
+                <button onclick="showDetails('Dermaco', 'All Skin Types')">View Product Details</button>
+                <div id="Dermaco-All Skin Types" class="details"></div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="brand-box">
+        <h2>Cetaphil</h2>
+        <div class="submodules">
+            <div class="submodule-box">
+                <img src="Sucetall.jpg" alt="All Skin Types">
+                <h3>All Skin Types</h3>
+                <button onclick="showDetails('Cetaphil', 'All Skin Types')">View Product Details</button>
+                <div id="Cetaphil-All Skin Types" class="details"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const productDetails = {
+            'DrSheth': {
+                'All Skin Types': {
+                    pros: "Avoid painful burns",
+                    uses: "Protects from sun burning",
+                    directions: "Apply generously to lips as needed.",
+                    whenToUse: "Morning, evening, or anytime your lips feel dry."
+                },
+                'Dry Skin': {
+                    pros: "Provides deep hydration",
+                    uses: "Skin cancer prevention",
+                    directions: "Apply generously to lips as needed.",
+                    whenToUse: "Morning, evening, or anytime your lips feel dry."
+                }
+
+            },
+            'Dermaco': {
+                'Oil Skin': {
+                    pros: "Provides Deep protection",
+                    uses: "Anti-aging benefits",
+                    directions: "Apply a thin layer on lips and gently massage.",
+                    whenToUse: "Use as required throughout the day."
+                },
+                'Normal Skin': {
+                    pros: "Provides deep hydration and protection.",
+                    uses: "prevents dark spots",
+                    directions: "Apply generously to lips as needed.",
+                    whenToUse: "Morning, evening, or anytime your lips feel dry."
+                },
+            
+                'All Skin Types': {
+                    pros: "Protection from free radicals",
+                    uses: "Smoothes the skin",
+                    directions: "Apply generously to lips as needed.",
+                    whenToUse: "Morning, evening, or anytime your lips feel dry."
+                }
+            },
+            'Cetaphil': {
+                'All Skin Types': {
+                    pros: "Protects from harmful chemicals",
+                    uses: "Pollution shield and smoothes.",
+                    directions: "Apply a thin layer on lips and gently massage.",
+                    whenToUse: "Use as required throughout the day."
+                },
+
+            
+        }
+    };
+    
+        function showDetails(brand, skinType) {
+        const detailDiv = document.getElementById(`${brand}-${skinType}`);
+        const details = productDetails[brand][skinType];
+        if (details) {
+            detailDiv.innerHTML = `
+                <strong>Pros:</strong> ${details.pros}<br>
+                <strong>Uses:</strong> ${details.uses}<br>
+                <strong>Directions:</strong> ${details.directions}<br>
+                <strong>When to Use:</strong> ${details.whenToUse}<br>
+            `;
+            detailDiv.style.display = detailDiv.style.display === "none" ? "block" : "none";
+        }
+    }
+    </script>
+    
+    </body>
+    </html>
+    
+
+
+    
+
+    
+</div>
+
+</body>
+</html>

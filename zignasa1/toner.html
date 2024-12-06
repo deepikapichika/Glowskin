@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toner Brands and Submodules</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('skinback.jpg'); /* Background image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            background: rgba(214, 171, 91, 0.551);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #444;
+        }
+        .brand-box {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            background: #f4f4f4;
+        }
+        .brand-box h2 {
+            color: #333;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .submodules {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .submodule-box {
+            width: 200px;
+            background: rgba(226, 200, 157, 0.514);
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 15px;
+        }
+        .submodule-box img {
+            width: 150px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 0%;
+            margin-bottom: 0px;
+        }
+        .submodule-box h3 {
+            font-size: 16px;
+            color: #444;
+        }
+        .submodule-box button {
+            background: #ffcb63;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .submodule-box button:hover {
+            background: #5753d1;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>toner Brands</h1>
+
+    <!-- Cetaphil Module -->
+    <div class="brand-box">
+        <h2>Cetaphil</h2>
+        <div class="submodules">
+            <div class="submodule-box">
+                <img src="Tcetaall.jpg" alt="Sensitive Skin">
+                <h3>All Skin types</h3>
+                <button onclick="showDetails('Cetaphil', 'Sensitive Skin')">View Product details</button>
+                <div id="Cetaphil-Sensitive Skin" class="details"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Plum Module -->
+    <div class="brand-box">
+        <h2>Plum</h2>
+        <div class="submodules">
+            <div class="submodule-box">
+                <img src="Tplumacne.jpg" alt="Acne  Skin">
+                <h3>Acne Skin</h3>
+                <button onclick="showDetails('Plum', 'Acne Skin')">View Product details</button>
+                <div id="Plum-Acne Skin" class="details"></div>
+            </div>
+            <div class="submodule-box">
+                <img src="Tplumoil.jpg" alt="Oily Skin">
+                <h3>Oily Skin</h3>
+                <button onclick="showDetails('Plum', 'Oily Skin')">View Product details</button>
+                <div id="Plum-Oily Skin" class="details"></div>
+            </div>
+            <div class="submodule-box">
+                <img src="Tplumcom.jpg" alt="Combination Skin">
+                <h3>Combination Skin</h3>
+                <button onclick="showDetails('Plum', 'Combination Skin')">View Product details</button>
+                <div id="Plum-Combination Skin" class="details"></div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="brand-box">
+        <h2>Wishcare</h2>
+        <div class="submodules">
+            <div class="submodule-box">
+                <img src="Twishnorm.jpg" alt="Normal Skin">
+                <h3>Normal Skin</h3>
+                <button onclick="showDetails('Wishcare', 'Normal Skin')">View Product details</button>
+                <div id="Wishcare-Normal Skin" class="details"></div>
+            </div>
+            <div class="submodule-box">
+                <img src="Twishoil.jpg" alt="Oily Skin">
+                <h3>All Skin types</h3>
+                <button onclick="showDetails('Wishcare', 'Oily Skin')">View Product details</button>
+                <div id="Wishcare-Oily Skin" class="details"></div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Minimalist Module -->
+    <div class="brand-box">
+        <h2>Cosrx</h2>
+        <div class="submodules">
+            <div class="submodule-box">
+                <img src="Tcossen.jpg" alt="Sensitive Skin">
+                <h3>Sensitive Skin</h3>
+                <button onclick="showDetails('Cosrx', 'Sensitive Skin')">View Product details</button>
+                <div id="Cosrx-Sensitive Skin" class="details"></div>
+            </div>
+            <div class="submodule-box">
+                <img src="Tcosoil.jpg" alt="Oily Skin">
+                <h3>Oily Skin</h3>
+                <button onclick="showDetails('Cosrx', 'Oily Skin')">View Product details</button>
+                <div id="Cosrx-Oily Skin" class="details"></div>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script>
+    const productDetails = {
+        'Cetaphil': {
+            'Sensitive Skin': {
+                pros: "Gentle on the skin, non-irritating.",
+                uses: "Hydrating and soothing.",
+                directions: "Apply to wet skin and rinse.",
+                whenToUse: "Morning and night."
+            }
+        },
+        'Plum': {
+            'Acne Skin': {
+                pros: "Gentle on the skin, non-irritating.",
+                uses: "Use daily for best results.",
+                directions: "Apply to wet skin and rinse.",
+                whenToUse: "Morning."
+            },
+            'Oily Skin': {
+                pros: "Controls oil without drying.",
+                uses: "Oil control and Acne prevention",
+                directions: "Massage gently on wet face and rinse.",
+                whenToUse: "Morning and night."
+            },
+            'Combination Skin': {
+
+                pros: "Controls oil without drying.",
+                uses: "Use daily for best results.",
+                directions: "Massage gently on wet face and rinse.",
+                whenToUse: "Morning and night."
+            }
+        },
+        'Wishcare': {
+            'Normal Skin': {
+                pros: "Gentle on the skin, non-irritating.",
+                uses: "Skin renewal",
+                directions: "Apply to wet skin and rinse.",
+                whenToUse: "Morning and night."
+            },
+            'Oily Skin': {
+                pros: "Controls oil without drying.",
+                uses: "Exfoliation",
+                directions: "Massage gently on wet face and rinse.",
+                whenToUse: "Morning and night."
+            }
+        },
+        'Cosrx': {
+            'Sensitive Skin': {
+                pros: "Gentle on the skin, non-irritating.",
+                uses: "Skin brightening",
+                directions: "Apply to wet skin and rinse.",
+                whenToUse: "night."
+            },
+            'Oily Skin': {
+                pros: "Controls oil without drying.",
+                uses: "Use daily for best results.",
+                directions: "Massage gently on wet face and rinse.",
+                whenToUse: "Morning and night."
+            }
+        }
+
+        
+    };
+
+    function showDetails(brand, skinType) {
+        const detailDiv = document.getElementById(`${brand}-${skinType}`);
+        const details = productDetails[brand][skinType];
+        if (details) {
+            detailDiv.innerHTML = `
+                <strong>Pros:</strong> ${details.pros}<br>
+                <strong>Uses:</strong> ${details.uses}<br>
+                <strong>Directions:</strong> ${details.directions}<br>
+                <strong>When to Use:</strong> ${details.whenToUse}<br>
+            `;
+            detailDiv.style.display = detailDiv.style.display === "none" ? "block" : "none";
+        }
+    }
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Type Selection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('skin-bg.jpg'); /* Background image */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        select, button {
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Select Skin Type</h1>
+        <select id="skinType">
+            <option value="oily">Oily</option>
+            <option value="dry">Dry</option>
+            <option value="sensitive">Sensitive</option>
+            <option value="combination">Combination</option>
+        </select>
+        <button onclick="nextPage()">Next</button>
+    </div>
+    <script>
+        function nextPage() {
+            const skinType = document.getElementById('skinType').value;
+            localStorage.setItem('skinType', skinType); // Save selected skin type
+            window.open('product-type.html', '_blank'); // Navigate to next page
+        }
+    </script>
+</body>
+</html>
